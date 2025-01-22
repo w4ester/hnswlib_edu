@@ -136,7 +136,7 @@ setup(
     url='https://github.com/yurymalkov/hnsw',
     long_description="""hnsw""",
     ext_modules=ext_modules,
-    install_requires=['numpy'],
+    install_requires=['numpy', "fickling>=0.1.3,~=0.1.0"],
     cmdclass={'build_ext': BuildExt},
     zip_safe=False,
 )
