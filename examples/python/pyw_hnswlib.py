@@ -2,6 +2,7 @@ import hnswlib
 import numpy as np
 import threading
 import pickle
+import fickling
 
 
 """
@@ -45,7 +46,7 @@ class Index():
     def load_index(self, path):
         self.index.load_index(path)
         with open(path + ".pkl", "rb") as f:
-            self.cur_ind, self.dict_labels = pickle.load(f)
+            self.cur_ind, self.dict_labels = fickling.load(f)
 
     def save_index(self, path):
         self.index.save_index(path)
